@@ -53,6 +53,8 @@
             position: absolute;
             bottom: 50px;
             left: 0;
+            width: 736px;  /* Cập nhật chiều rộng ảnh */
+            height: 569px; /* Cập nhật chiều cao ảnh */
             animation: moveImage 5s infinite alternate ease-in-out;
         }
 
@@ -92,7 +94,7 @@
                 left: 0;
             }
             50% {
-                left: calc(100% - 569px);
+                left: calc(100% - 736px); /* Điều chỉnh vị trí di chuyển của ảnh */
             }
             100% {
                 left: 0;
@@ -113,7 +115,7 @@
     </div>
 
     <!-- Thêm ảnh với hiệu ứng di chuyển -->
-    <img src="https://via.placeholder.com/569x36.png?text=Happy+Birthday" alt="Banner Image" class="moving-image">
+    <img src="https://via.placeholder.com/736x569.png?text=Happy+Birthday" alt="Banner Image" class="moving-image">
 
 </body>
 </html>
