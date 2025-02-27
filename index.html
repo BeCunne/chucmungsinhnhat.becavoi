@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thiệp Sinh Nhật</title>
+  <style>
+    /* Cài đặt background động */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1E3A8A;
+      overflow: hidden;
+      position: relative;
+      font-family: 'Vietcon', sans-serif;
+    }
+
+    /* Hình nền động */
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+      animation: moveBackground 10s linear infinite;
+    }
+
+    @keyframes moveBackground {
+      0% { background-position: 0 0; }
+      100% { background-position: 100% 100%; }
+    }
+
+    /* Khung thiệp */
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1;
+      animation: popUp 1s ease-out;
+    }
+
+    @keyframes popUp {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Phông chữ và màu sắc */
+    h1, h2 {
+      color: #1E40AF;
+      font-family: 'Vietcon', sans-serif;
+      font-size: 2rem;
+      margin: 0;
+      animation: fadeIn 2s ease-out;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-top: 15px;
+      color: #2563EB;
+    }
+
+    /* Hiệu ứng cho các icon động */
+    .emoji {
+      font-size: 4rem;
+      margin-top: 10px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Hiệu ứng cho thông điệp */
+    .message {
+      font-size: 1.5rem;
+      color: #1D4ED8;
+      margin-top: 20px;
+      font-family: 'Vietcon', sans-serif;
+      animation: fadeIn 4s ease-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Hiệu ứng chuyển động cho các hiệu ứng */
+    .animation-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <div class="card">
+    <div class="animation-wrapper">
+      <h1>Bé Cún 🐶</h1>
+      <h2>chúc Bé Cá Voi 🐳 sinh nhật vui vẻ!</h2>
+      <div class="message">
+        Chúc anh tuổi đời +1 ~ niềm vui +10 ~ tinh thần +100 ~ sức khỏe +1000
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Có thể thêm hiệu ứng JavaScript nếu cần
+  </script>
+
+</body>
+</html>
