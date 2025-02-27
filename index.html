@@ -1,144 +1,89 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thiệp Sinh Nhật</title>
-  <style>
-    /* Cài đặt background động với hiệu ứng thay đổi màu liên tục */
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      position: relative;
-      font-family: 'Vietcon', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Sinh Nhật Bé Cá Voi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dance+Script&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1E90FF; /* Màu xanh dương */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Dance Script', cursive;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
 
-    /* Nền với gradient thay đổi liên tục */
-    .background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, #1e40af, #2563eb, #4f83cc, #60a5fa);
-      background-size: 400% 400%;
-      animation: gradientAnimation 10s ease infinite;
-    }
+        .card {
+            padding: 50px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 700px;
+            animation: fadeIn 2s ease-in-out;
+        }
 
-    @keyframes gradientAnimation {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
+        .message {
+            font-size: 40px;
+            line-height: 1.5;
+            animation: colorChange 2s infinite alternate, fadeInText 1s ease-in-out;
+        }
 
-    /* Khung thiệp */
-    .card {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 30px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-      position: relative;
-      z-index: 1;
-      animation: popUp 1s ease-out;
-    }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
 
-    @keyframes popUp {
-      0% { transform: scale(0.8); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
 
-    /* Phông chữ và màu sắc */
-    h1, h2 {
-      color: #1e40af;
-      font-family: 'Vietcon', sans-serif;
-      font-size: 2rem;
-      margin: 0;
-      animation: fadeIn 2s ease-out;
-    }
-
-    h1 {
-      font-size: 3rem;
-    }
-
-    h2 {
-      font-size: 2.5rem;
-      margin-top: 15px;
-      color: #2563eb;
-    }
-
-    /* Hiệu ứng cho các icon động */
-    .emoji {
-      font-size: 4rem;
-      margin-top: 10px;
-      animation: bounce 1s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-
-    /* Hiệu ứng cho thông điệp */
-    .message {
-      font-size: 1.5rem;
-      color: #1d4ed8;
-      margin-top: 20px;
-      font-family: 'Vietcon', sans-serif;
-      animation: fadeIn 4s ease-out;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    /* Hiệu ứng nhấp nháy cho chữ */
-    .blink {
-      animation: blinkAnimation 1s steps(1, start) infinite;
-    }
-
-    @keyframes blinkAnimation {
-      0% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    /* Hiệu ứng chuyển động cho các hiệu ứng */
-    .animation-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-  </style>
+        @keyframes colorChange {
+            0% {
+                color: #ff4500;
+            }
+            25% {
+                color: #ff6347;
+            }
+            50% {
+                color: #32cd32;
+            }
+            75% {
+                color: #1e90ff;
+            }
+            100% {
+                color: #ff1493;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <div class="background"></div>
-
-  <div class="card">
-    <div class="animation-wrapper">
-      <!-- Chữ nhấp nháy -->
-      <h1 class="blink">Bé Cún 🐶</h1>
-      <h2>chúc Bé Cá Voi 🐳 sinh nhật vui vẻ!</h2>
-      <div class="message">
-        Chúc anh tuổi đời +1 ~ niềm vui +10 ~ tinh thần +100 ~ sức khỏe +1000
-      </div>
+    <div class="card">
+        <div class="message">
+            <p>Bé Cún 🐶 chúc Bé Cá Voi 🐳 sinh nhật vui vẻ!</p>
+            <p>Chúc anh tuổi đời +1 ~ niềm vui +10 ~ tinh thần +100 ~ sức khỏe +1000</p>
+            <p>Happy Birthday!</p>
+        </div>
     </div>
-  </div>
 
 </body>
 </html>
