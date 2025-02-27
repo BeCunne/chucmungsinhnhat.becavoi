@@ -9,7 +9,8 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #1E90FF; /* Màu xanh dương */
+            background: url('https://drive.google.com/uc?id=1-FAcXCQVcSjsIZ91qpqS0jKN2RCkkjrX') no-repeat center center fixed; 
+            background-size: cover; /* Đảm bảo ảnh phủ đầy nền */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -53,8 +54,8 @@
             position: absolute;
             bottom: 50px;
             left: 0;
-            width: 736px;  /* Cập nhật chiều rộng ảnh */
-            height: 569px; /* Cập nhật chiều cao ảnh */
+            width: 736px;
+            height: 569px;
             animation: moveImage 5s infinite alternate ease-in-out;
         }
 
@@ -94,7 +95,7 @@
                 left: 0;
             }
             50% {
-                left: calc(100% - 736px); /* Điều chỉnh vị trí di chuyển của ảnh */
+                left: calc(100% - 736px);
             }
             100% {
                 left: 0;
@@ -108,13 +109,14 @@
         <div class="message">
             <p class="line1">Bé Cún 🐶 chúc Bé Cá Voi 🐳 sinh nhật vui vẻ!</p>
             <p class="line2">
-                Chúc anh tuổi đời +1 ~ niềm vui +10 ~ tinh thần +100 ~ sức khỏe +1000</p>
+                Chúc anh tuổi đời +1 ~ niềm vui +10 ~ tinh thần +100 ~ sức khỏe +1000
+            </p>
             <p class="line3">Happy Birthday!</p>
         </div>
     </div>
 
     <!-- Thêm ảnh với hiệu ứng di chuyển -->
-    <img src="images/chuhpbd.jpg" alt="Banner chuhpbd" class="moving-image">
+    <img src="https://via.placeholder.com/736x569.png?text=Happy+Birthday" alt="Banner Image" class="moving-image">
 
 </body>
 </html>
