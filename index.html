@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thiệp Sinh Nhật</title>
   <style>
-    /* Cài đặt background động */
+    /* Cài đặt background động với gradient màu xanh dương */
     body {
       margin: 0;
       padding: 0;
@@ -13,26 +13,33 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #1E3A8A;
       overflow: hidden;
       position: relative;
       font-family: 'Vietcon', sans-serif;
     }
 
-    /* Hình nền động */
+    /* Hiệu ứng chuyển động nền */
     .background {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-      animation: moveBackground 10s linear infinite;
+      background: linear-gradient(45deg, #1e40af, #2563eb, #4f83cc, #60a5fa);
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite;
     }
 
-    @keyframes moveBackground {
-      0% { background-position: 0 0; }
-      100% { background-position: 100% 100%; }
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     /* Khung thiệp */
@@ -54,7 +61,7 @@
 
     /* Phông chữ và màu sắc */
     h1, h2 {
-      color: #1E40AF;
+      color: #1e40af;
       font-family: 'Vietcon', sans-serif;
       font-size: 2rem;
       margin: 0;
@@ -68,7 +75,7 @@
     h2 {
       font-size: 2.5rem;
       margin-top: 15px;
-      color: #2563EB;
+      color: #2563eb;
     }
 
     /* Hiệu ứng cho các icon động */
@@ -86,7 +93,7 @@
     /* Hiệu ứng cho thông điệp */
     .message {
       font-size: 1.5rem;
-      color: #1D4ED8;
+      color: #1d4ed8;
       margin-top: 20px;
       font-family: 'Vietcon', sans-serif;
       animation: fadeIn 4s ease-out;
@@ -120,10 +127,6 @@
       </div>
     </div>
   </div>
-
-  <script>
-    // Có thể thêm hiệu ứng JavaScript nếu cần
-  </script>
 
 </body>
 </html>
