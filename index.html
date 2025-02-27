@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thiệp Sinh Nhật</title>
   <style>
-    /* Cài đặt background động với gradient màu xanh dương */
+    /* Cài đặt background động với hiệu ứng thay đổi màu liên tục */
     body {
       margin: 0;
       padding: 0;
@@ -18,7 +18,7 @@
       font-family: 'Vietcon', sans-serif;
     }
 
-    /* Hiệu ứng chuyển động nền */
+    /* Nền với gradient thay đổi liên tục */
     .background {
       position: absolute;
       top: 0;
@@ -27,7 +27,7 @@
       height: 100%;
       background: linear-gradient(45deg, #1e40af, #2563eb, #4f83cc, #60a5fa);
       background-size: 400% 400%;
-      animation: gradientAnimation 15s ease infinite;
+      animation: gradientAnimation 10s ease infinite;
     }
 
     @keyframes gradientAnimation {
@@ -104,6 +104,17 @@
       100% { opacity: 1; }
     }
 
+    /* Hiệu ứng nhấp nháy cho chữ */
+    .blink {
+      animation: blinkAnimation 1s steps(1, start) infinite;
+    }
+
+    @keyframes blinkAnimation {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
     /* Hiệu ứng chuyển động cho các hiệu ứng */
     .animation-wrapper {
       display: flex;
@@ -120,7 +131,8 @@
 
   <div class="card">
     <div class="animation-wrapper">
-      <h1>Bé Cún 🐶</h1>
+      <!-- Chữ nhấp nháy -->
+      <h1 class="blink">Bé Cún 🐶</h1>
       <h2>chúc Bé Cá Voi 🐳 sinh nhật vui vẻ!</h2>
       <div class="message">
         Chúc anh tuổi đời +1 ~ niềm vui +10 ~ tinh thần +100 ~ sức khỏe +1000
