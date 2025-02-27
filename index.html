@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chúc Mừng Sinh Nhật Bé Cá Voi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dance+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> <!-- Font chữ viết tay -->
     <style>
         body {
             margin: 0;
@@ -14,40 +14,60 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            font-family: 'Dance Script', cursive;
+            font-family: 'Pacifico', cursive;
             color: white;
-            text-align: center;
             overflow: hidden;
+            flex-direction: column;
+            text-align: center;
         }
 
         .card {
             padding: 50px;
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.2);
             border-radius: 20px;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
             width: 80%;
-            max-width: 700px;
-            animation: fadeIn 2s ease-in-out;
+            max-width: 800px;
         }
 
         .message {
             font-size: 40px;
             line-height: 1.5;
-            animation: colorChange 2s infinite alternate, fadeInText 1s ease-in-out;
         }
 
-        @keyframes fadeIn {
+        .line1 {
+            animation: zoomIn 2s ease-out forwards;
+        }
+
+        .line2 {
+            animation: fadeInWords 5s ease forwards;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .line3 {
+            animation: flyUp 2s ease-in-out forwards;
+        }
+
+        .moving-image {
+            position: absolute;
+            bottom: 50px;
+            left: 0;
+            animation: moveImage 5s infinite alternate ease-in-out;
+        }
+
+        @keyframes zoomIn {
             0% {
+                transform: scale(0.5);
                 opacity: 0;
-                transform: scale(0.9);
             }
             100% {
-                opacity: 1;
                 transform: scale(1);
+                opacity: 1;
             }
         }
 
-        @keyframes fadeInText {
+        @keyframes fadeInWords {
             0% {
                 opacity: 0;
             }
@@ -56,21 +76,26 @@
             }
         }
 
-        @keyframes colorChange {
+        @keyframes flyUp {
             0% {
-                color: #ff4500;
+                transform: translateY(30px);
+                opacity: 0;
             }
-            25% {
-                color: #ff6347;
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes moveImage {
+            0% {
+                left: 0;
             }
             50% {
-                color: #32cd32;
-            }
-            75% {
-                color: #1e90ff;
+                left: calc(100% - 569px);
             }
             100% {
-                color: #ff1493;
+                left: 0;
             }
         }
     </style>
@@ -79,11 +104,16 @@
 
     <div class="card">
         <div class="message">
-            <p>Bé Cún 🐶 chúc Bé Cá Voi 🐳 sinh nhật vui vẻ!</p>
-            <p>Chúc anh tuổi đời +1 ~ niềm vui +10 ~ tinh thần +100 ~ sức khỏe +1000</p>
-            <p>Happy Birthday!</p>
+            <p class="line1">Bé Cún 🐶 chúc Bé Cá Voi 🐳 sinh nhật vui vẻ!</p>
+            <p class="line2">
+                Chúc anh tuổi đời +1 ~ niềm vui +10 ~ tinh thần +100 ~ sức khỏe +1000
+            </p>
+            <p class="line3">Happy Birthday!</p>
         </div>
     </div>
+
+    <!-- Thêm ảnh với hiệu ứng di chuyển -->
+    <img src="https://via.placeholder.com/569x36.png?text=Happy+Birthday" alt="Banner Image" class="moving-image">
 
 </body>
 </html>
